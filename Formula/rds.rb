@@ -11,7 +11,7 @@ class Rds < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/robotdomainsearch/releases/releases/download/v0.1.1/rds_darwin_amd64.tar.gz"
-      sha256 "93c4d23e274bb7f07bb7fb45d775904dcf2786acceedd19c87a1912ff736f5b5"
+      sha256 "1421f5e6ea3fab89a3ae3f42a5ae5d3c979df08e56ca7ee74584c5174c9348f7"
 
       define_method(:install) do
         bin.install "rds"
@@ -19,7 +19,7 @@ class Rds < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/robotdomainsearch/releases/releases/download/v0.1.1/rds_darwin_arm64.tar.gz"
-      sha256 "ec0d29cfc31eae346eff595515f523c90b8db9a4759b9c3433e85450c31f05f6"
+      sha256 "d5d0c99a02d3ce8b94ca7c79ce49af2d3bf519cc5754260ed17fbbc592043ab4"
 
       define_method(:install) do
         bin.install "rds"
@@ -30,14 +30,14 @@ class Rds < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/robotdomainsearch/releases/releases/download/v0.1.1/rds_linux_amd64.tar.gz"
-      sha256 "8fa5bf7e638b01ad969fc38e6dafda8c1f32cfe2bb4ce25d82b8b26cc83a764a"
+      sha256 "2a193ccde20024229264bcba83222b533446d61b517a9294fe988862e640de27"
       define_method(:install) do
         bin.install "rds"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/robotdomainsearch/releases/releases/download/v0.1.1/rds_linux_arm64.tar.gz"
-      sha256 "f1e052208da589b79a3b0344a1aab14dc733b9f7d22291820873d148b0ee8f93"
+      sha256 "faa55e9c0ee0002405f43ddf2b0904c744b4ae935d5c4fb73b56d16467ab296a"
       define_method(:install) do
         bin.install "rds"
       end
