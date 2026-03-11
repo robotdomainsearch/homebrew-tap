@@ -5,21 +5,21 @@
 class Rds < Formula
   desc "RobotDomainSearch CLI — domain intelligence from your terminal"
   homepage "https://robotdomainsearch.com"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/robotdomainsearch/releases/releases/download/v0.1.1/rds_darwin_amd64.tar.gz"
-      sha256 "1421f5e6ea3fab89a3ae3f42a5ae5d3c979df08e56ca7ee74584c5174c9348f7"
+      url "https://github.com/robotdomainsearch/releases/releases/download/v0.2.0/rds_darwin_amd64.tar.gz"
+      sha256 "1a7d9984b97a794f58233d5603f0d9965e2fa050f4973b75c342c4abba165c35"
 
       define_method(:install) do
         bin.install "rds"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/robotdomainsearch/releases/releases/download/v0.1.1/rds_darwin_arm64.tar.gz"
-      sha256 "d5d0c99a02d3ce8b94ca7c79ce49af2d3bf519cc5754260ed17fbbc592043ab4"
+      url "https://github.com/robotdomainsearch/releases/releases/download/v0.2.0/rds_darwin_arm64.tar.gz"
+      sha256 "42e2c30b06d75fae2679a4b5b8ccc6c8c08fe1c6f1a55d58930779f99070c0c2"
 
       define_method(:install) do
         bin.install "rds"
@@ -29,15 +29,15 @@ class Rds < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robotdomainsearch/releases/releases/download/v0.1.1/rds_linux_amd64.tar.gz"
-      sha256 "2a193ccde20024229264bcba83222b533446d61b517a9294fe988862e640de27"
+      url "https://github.com/robotdomainsearch/releases/releases/download/v0.2.0/rds_linux_amd64.tar.gz"
+      sha256 "73c68ce7f156b07f6c16a80b14e98da0d84efa82dde2177ee580a3cc2e3b791a"
       define_method(:install) do
         bin.install "rds"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robotdomainsearch/releases/releases/download/v0.1.1/rds_linux_arm64.tar.gz"
-      sha256 "faa55e9c0ee0002405f43ddf2b0904c744b4ae935d5c4fb73b56d16467ab296a"
+      url "https://github.com/robotdomainsearch/releases/releases/download/v0.2.0/rds_linux_arm64.tar.gz"
+      sha256 "eec55d7380042d1b47b6a1bbd4cb1e2951d792c11482d9c79c2f47bc0866ef13"
       define_method(:install) do
         bin.install "rds"
       end
